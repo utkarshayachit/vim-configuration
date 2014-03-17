@@ -14,31 +14,31 @@ function! NewFile(afile)
   if (copyright_type == 1)
     " Create a VTK style file. 
     if (extension == "h")
-      :0r /Users/utkarsh/.vim/plugin/vtk.h
+      :0r $HOME/.vim/plugin/vtk.h
     elseif (extension == "cxx")
-      :0r /Users/utkarsh/.vim/plugin/vtk.cxx
+      :0r $HOME/.vim/plugin/vtk.cxx
     endif
     :execute ":silent! %s%\\$CLASSNAME\\$%" . classname . "%g"
   elseif (copyright_type == 2)
     " Create a ParaView Server Manager style file.
     if (extension == "h")
-      :0r /Users/utkarsh/.vim/plugin/vtkPV.h
+      :0r $HOME/.vim/plugin/vtkPV.h
     elseif (extension == "cxx")
-      :0r /Users/utkarsh/.vim/plugin/vtkPV.cxx
+      :0r $HOME/.vim/plugin/vtkPV.cxx
     endif
     :execute ":silent! %s%\\$CLASSNAME\\$%" . classname . "%g"
   elseif (copyright_type == 3)
     " Create a ParaView Server Manager style file.
     if (extension == "h")
-      :0r /Users/utkarsh/.vim/plugin/pq.h
+      :0r $HOME/.vim/plugin/pq.h
     elseif (extension == "cxx")
-      :0r /Users/utkarsh/.vim/plugin/pq.cxx
+      :0r $HOME/.vim/plugin/pq.cxx
     endif
     :execute ":silent! %s%\\$CLASSNAME\\$%" . classname . "%g"
   endif
 endfunction
 
-"":autocmd BufNewFile  vtk*.h 0r /Users/utkarsh/.vim/plugin/vtk.h|silent execute ":%s%\\$CLASSNAME\\$%". expand("<afile>") . "%g"
+"":autocmd BufNewFile  vtk*.h 0r $HOME/.vim/plugin/vtk.h|silent execute ":%s%\\$CLASSNAME\\$%". expand("<afile>") . "%g"
 
 :autocmd! BufNewFile  vtk*.h ks|execute "call NewFile(\"". expand("<afile>") . "\")"|'s
 :autocmd! BufNewFile  vtk*.cxx ks|execute "call NewFile(\"". expand("<afile>") . "\")"|'s
