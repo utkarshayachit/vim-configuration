@@ -59,7 +59,8 @@ filetype plugin indent on     " required
  "set guifont=Andale\ Mono\ 9
  "set guifont=monospace\ 8
  "set guifont=Nimbus\ Mono\ L\\,\ 9
- set guifont=Monaco:h14
+ " on OsX, use this
+ "set guifont=Monaco:h14
  "
  "
  " Add spell checking
@@ -92,7 +93,7 @@ filetype plugin indent on     " required
  :autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl :setf glsl
  :autocmd BufNewFile,BufRead *.as :setf actionscript
  :autocmd BufNewFile,BufRead *.mxml :setf mxml
- :autocmd BufNewFile,BufRead *.cxx,*.h,*.cpp,*.txx,*.in set spell
+ :autocmd BufNewFile,BufRead *.cxx,*.h,*.cpp,*.txx,*.in,*.tex set spell
 " :autocmd BufRead,BufNewFile *.cmake,*.cmake.in runtime! indent/cmake.vim 
 " :autocmd BufRead,BufNewFile *.cmake,*.cmake.in setf cmake
 " :autocmd BufRead,BufNewFile CMakeLists.* :runtime! indent/cmake.vim 
@@ -115,3 +116,7 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 :set textwidth=80
+
+" CtrlP settings
+" This makes it easier to match files.
+let g:ctrlp_regexp=1
