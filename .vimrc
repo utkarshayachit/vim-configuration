@@ -120,3 +120,4 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 " CtrlP settings
 " This makes it easier to match files.
 let g:ctrlp_regexp=1
+let g:ctrlp_max_files=0
