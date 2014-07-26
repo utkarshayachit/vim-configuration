@@ -117,6 +117,9 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 :set textwidth=80
 
+" set colorscheme
+colorscheme smyck
+
 " CtrlP settings
 " This makes it easier to match files.
 let g:ctrlp_regexp=1
