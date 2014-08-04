@@ -109,6 +109,10 @@ imap <C-S-Tab> <C-O>:tabp<CR>
 map <C-T> :tabnew<CR>
 imap <C-T> <C-O>:tabnew<CR>
 
+" In normal mode, map Ctrl+n to next buffer and Ctrl+m to previous buffer
+nmap <C-n> :bnext<CR>
+nmap <C-m> :bprevious<CR>
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
 au BufEnter * match ExtraWhitespace /\s\+$/
