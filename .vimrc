@@ -3,44 +3,38 @@
  filetype off                  " required
 
  " set the runtime path to include Vundle and initialize
- set rtp+=~/.vim/bundle/vundle/
- "call vundle#rc()
- " alternatively, pass a path where Vundle should install bundles
- let path = '~/.vim/installed-bundles'
- call vundle#rc(path)
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+ " alternatively, pass a path where Vundle should install plugins
+ "call vundle#begin('~/some/path/here')
 
  " let Vundle manage Vundle, required
- Bundle 'gmarik/vundle'
+ Plugin 'VundleVim/Vundle.vim'
 
  " My bundles
- Bundle 'ctrlp.vim'
+ Plugin 'ctrlp.vim'
+ Plugin 'vim-scripts/a.vim'
 
-"" The following are examples of different formats supported.
-"" Keep bundle commands between here and filetype plugin indent on.
-"" scripts on GitHub repos
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'tpope/vim-rails.git'
-"" The sparkup vim script is in a subdirectory of this repo called vim.
-"" Pass the path to set the runtimepath properly.
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-"" scripts from http://vim-scripts.org/vim/scripts.html
-"Bundle 'L9'
-"Bundle 'FuzzyFinder'
-"" scripts not on GitHub
-"Bundle 'git://git.wincent.com/command-t.git'
-"" git repos on your local machine (i.e. when working on your own plugin)
-"Bundle 'file:///home/gmarik/path/to/plugin'
-"" ...
-
-filetype plugin indent on     " required
+ " All of your Plugins must be added before the following line
+ call vundle#end()            " required
+ filetype plugin indent on    " required
+ " To ignore plugin indent changes, instead use:
+ "filetype plugin on
+ "
+ " Brief help
+ " :PluginList       - lists configured plugins
+ " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+ " :PluginSearch foo - searches for foo; append `!` to refresh local cache
+ " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " Put your non-Plugin stuff after this line
  " -------- end vundle
-
-
 
  set nocompatible " We use a vim
  set autoindent
- set cindent
+ "set cindent
+ set smartindent
  set tabstop=2       " Tabs are two characters
  set shiftwidth=2    " Indents are two charactes too
  set expandtab       " Do not use tabs
@@ -75,7 +69,7 @@ filetype plugin indent on     " required
  set smartcase " Ignore case when searching lowercase
  "
  "
- set cinoptions={1s,:0,l1,g0,c0,(0,(s,m1 " VTK, ITK style indenting
+ " set cinoptions={1s,:0,l1,g0,c0,(0,(s,m1 " VTK, ITK style indenting
  "
  " Fix for Makefiles do tabs
  :autocmd BufRead,BufNewFile [Mm]akefile :set noexpandtab
@@ -122,9 +116,18 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 :set textwidth=80
 
 " set colorscheme
-colorscheme smyck
+" colorscheme smyck
+colorscheme desert
 
 " CtrlP settings
 " This makes it easier to match files.
 let g:ctrlp_regexp=1
 let g:ctrlp_max_files=0
+
+" a.vim settings
+let g:alternateExtensions_h = "c,cpp,cxx,cc,CC,txx,TXX,hxx,HXX"
+let g:alternateExtensions_hxx = "h,H"
+let g:alternateExtensions_HXX = "H,h"
+
+" set shell to bash since fish doesn't work.
+set shell=/bin/bash
