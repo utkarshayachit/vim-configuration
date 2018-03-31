@@ -29,8 +29,8 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ========================================================================*/
-#ifndef __$CLASSNAME$_h
-#define __$CLASSNAME$_h
+#ifndef $CLASSNAME$_h
+#define $CLASSNAME$_h
 
 #include <QObject>
 

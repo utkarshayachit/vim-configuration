@@ -12,12 +12,12 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-// .NAME vtk$FILENAME$ 
+// .NAME vtk$FILENAME$
 // .SECTION Description
-// 
+//
 
-#ifndef __vtk$FILENAME$_h
-#define __vtk$FILENAME$_h
+#ifndef vtk$FILENAME$_h
+#define vtk$FILENAME$_h
 
 #include "vtkObject.h"
 
@@ -38,4 +38,3 @@ private:
 };
 
 #endif
-

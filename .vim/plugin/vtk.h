@@ -12,11 +12,14 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-// .NAME $CLASSNAME$ 
-// .SECTION Description
+/**
+ * @class $CLASSNAME$
+ * @brief
+ *
+ */
 
-#ifndef __$CLASSNAME$_h
-#define __$CLASSNAME$_h
+#ifndef $CLASSNAME$_h
+#define $CLASSNAME$_h
 
 #include "vtkObject.h"
 
@@ -25,17 +28,15 @@ class VTK_COMMON_EXPORT $CLASSNAME$ : public vtkObject
 public:
   static $CLASSNAME$* New();
   vtkTypeMacro($CLASSNAME$, vtkObject);
-  void PrintSelf(ostream& os, vtkIndent indent);
+  void PrintSelf(ostream& os, vtkIndent indent) override;
 
-//BTX
 protected:
   $CLASSNAME$();
   ~$CLASSNAME$();
 
 private:
-  $CLASSNAME$(const $CLASSNAME$&); // Not implemented.
-  void operator=(const $CLASSNAME$&); // Not implemented.
-//ETX
+  $CLASSNAME$(const $CLASSNAME$&) = delete;
+  void operator=(const $CLASSNAME$&) = delete;
 };
 
 #endif
